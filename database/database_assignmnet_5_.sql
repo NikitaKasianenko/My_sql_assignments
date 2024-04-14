@@ -87,7 +87,7 @@ CREATE TABLE `match_days` (
   `day_number` int NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `season_league_day_unique` (`season_id`,`league_id`,`day_number`),
-  KEY `league_id` (`league_id`),
+  KEY `idx_tournament_league_id` (`league_id`),
   CONSTRAINT `match_days_ibfk_1` FOREIGN KEY (`season_id`) REFERENCES `seasons` (`id`),
   CONSTRAINT `match_days_ibfk_2` FOREIGN KEY (`league_id`) REFERENCES `leagues` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -211,8 +211,8 @@ CREATE TABLE `standings` (
   `goals_for` int NOT NULL,
   `goals_against` int NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `match_day_id` (`match_day_id`),
-  KEY `team_id` (`team_id`),
+  KEY `idx_tournament_match_day_id` (`match_day_id`),
+  KEY `idx_tournament_team_id` (`team_id`),
   CONSTRAINT `standings_ibfk_1` FOREIGN KEY (`match_day_id`) REFERENCES `match_days` (`id`),
   CONSTRAINT `standings_ibfk_2` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -373,4 +373,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-14 15:55:48
+-- Dump completed on 2024-04-14 20:46:31

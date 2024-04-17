@@ -15,7 +15,6 @@
 
 ### Assignment 2 (pa2)
 
-- `schema_updates.sql`: Оновлення схеми бази даних.
 - `query/query_1.sql`,`query/query2.sql`: Операції CRUD.
 - `bonus`: Додаткові завдання.
 

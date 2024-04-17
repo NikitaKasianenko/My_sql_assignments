@@ -46,3 +46,4 @@
 
 - **Автор:** Нікіта Кас'яненко
 - **GitHub:** NikitaKasianenko
+- **Навчальний заклад:** Kyiv School of Economics, ITBA27(1 курс)

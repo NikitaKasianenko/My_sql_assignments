@@ -24,7 +24,7 @@
 ### Assignment 4 (pa4)
 
 - `Procedures`: Збережені процедури.
-- `Transaction`: Збережені процедури.
+- `Transaction`: Збережені транзакції.
 
 ### Assignment 5 (pa5)
 
